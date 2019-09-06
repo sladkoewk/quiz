@@ -4,3 +4,9 @@
 @import 'general/fonts';
 @import 'general/base';
 @import 'general/typography';
+
+@import 'quiz';
+
+@import './general/components/button.scss';
+@import './general/components/input.scss';
+@import './general/components/radio.scss';

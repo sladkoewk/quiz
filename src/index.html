@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="mdl-js">
 
 <head>
   <meta charset="UTF-8">
@@ -10,8 +10,37 @@
 </head>
 
 <body>
-
-
+  <div class="mdl-layout__container has-scrolling-header">
+    <div
+      class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100 is-upgraded is-small-screen"
+      data-upgraded=",MaterialLayout">
+      <main class="quiz__main mdl-layout__content">
+        <div class="quiz__ribbon mdl-color--deep-purple-800"></div>
+        <div class="quiz__container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div
+            class="quiz__content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <div class="quiz__item quiz__item-js">
+              <!-- Content Generation Block -->
+            </div>
+          </div>
+        </div>
+        <footer class="quiz__footer mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <ul class="mdl-mini-footer--link-list">
+              <li><a href="">Help</a></li>
+              <li><a href="">Privacy and Terms</a></li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </div>
+  <button
+    class="quiz__next mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast"
+    data-upgraded=",MaterialButton,MaterialRipple">
+    Далее
+  </button>
 
   <script src="index.js"></script>
 </body>
