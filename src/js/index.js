@@ -1,0 +1,1 @@
+import './vendor/material.min';
