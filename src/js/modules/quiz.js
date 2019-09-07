@@ -1,12 +1,21 @@
 import elementsFactory from './factories/elementsFactory';
 
 const answers = [];
+let resultQuiz = {};
 let container;
 let questions;
 
 function writeAnswer(answer, index) {
-  if (answer) {
-    answers.push(
+  if (index === 0) {
+    resultQuiz.answers = [];
+  } else if (index === 1) {
+    resultQuiz.name = answer;
+  } else if (index === 8) {
+    resultQuiz.date = answer;
+    answers.push(resultQuiz);
+    resultQuiz = {};
+  } else if (answer) {
+    resultQuiz.answers.push(
       {
         index,
         answer,
