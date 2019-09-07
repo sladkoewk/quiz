@@ -1,4 +1,4 @@
-function renderRadio(question, container, respond) {
+function radio(question, index, container, respond) {
   const button = document.createElement('button');
   const textButton = document.createTextNode('Далее');
   button.appendChild(textButton);
@@ -37,7 +37,7 @@ function renderRadio(question, container, respond) {
     const resultElement = container.querySelector('input[type="radio"]:checked');
     const answer = question.answers[resultElement.value].text;
     const { next } = question.answers[resultElement.value];
-    respond({ answer, next });
+    respond({ answer, next, index });
   }
 
   button.addEventListener('click', sendResult);
@@ -46,4 +46,4 @@ function renderRadio(question, container, respond) {
   window.componentHandler.upgradeAllRegistered();
 }
 
-export default renderRadio;
+export default radio;

@@ -1,17 +1,17 @@
-function renderInput(question, container, respond) {
+function input(question, index, container, respond) {
   const wrapperInput = document.createElement('div');
   wrapperInput.className = 'input mdl-textfield mdl-js-textfield';
 
-  const input = document.createElement('input');
-  input.className = 'mdl-textfield__input';
-  input.id = 'input';
-  input.setAttribute('type', 'text');
+  const inputField = document.createElement('input');
+  inputField.className = 'mdl-textfield__input';
+  inputField.id = 'input';
+  inputField.setAttribute('type', 'text');
 
   const label = document.createElement('label');
   label.className = 'mdl-textfield__label';
-  input.setAttribute('for', 'input');
+  inputField.setAttribute('for', 'input');
 
-  wrapperInput.appendChild(input);
+  wrapperInput.appendChild(inputField);
   wrapperInput.appendChild(label);
 
   const button = document.createElement('button');
@@ -24,13 +24,13 @@ function renderInput(question, container, respond) {
   container.append(button);
 
   function sendResult() {
-    respond({ answer: input.value, next: question.next });
+    respond({ answer: inputField.value, next: question.next, index });
   }
 
   button.addEventListener('click', sendResult);
 
-  input.addEventListener('input', () => {
-    if (input.value.length >= question.minLength) {
+  inputField.addEventListener('input', () => {
+    if (inputField.value.length >= question.minLength) {
       button.className = 'button mdl-button mdl-js-button mdl-button--raised mdl-button--colored';
       button.removeAttribute('disabled');
     } else {
@@ -38,6 +38,8 @@ function renderInput(question, container, respond) {
       button.setAttribute('disabled', 'disabled');
     }
   });
+
+  window.componentHandler.upgradeAllRegistered();
 }
 
-export default renderInput;
+export default input;
