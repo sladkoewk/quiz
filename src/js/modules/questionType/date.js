@@ -1,5 +1,4 @@
 import flatpickr from '../../vendor/flatpickr';
-
 import buttonElement, { enableButtonElement } from '../elements/buttonElement';
 
 function date(question, index, container, respond) {

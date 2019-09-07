@@ -66,8 +66,7 @@ const questionnaire = {
   7: {
     text: 'Напишите ваши предложения по развитию нашего ресторана',
     type: 'textarea',
-    isRequired: false,
-    next: 'end',
+    next: 8,
   },
   8: {
     text: 'Благодарим вас за участие в опросе',
