@@ -20,7 +20,7 @@ const ELEMENTS = {
   end,
 };
 
-function elementsFactory(question, container, respond, index) {
+function elementsFactory(question, index, container, respond) {
   title(question.text, container);
   ELEMENTS[question.type](question, index, container, respond);
 }

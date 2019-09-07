@@ -23,7 +23,7 @@ function respond(answerObject) {
 
 function renderQuestion(question, index) {
   container.innerHTML = '';
-  elementsFactory(question, container, respond, index);
+  elementsFactory(question, index, container, respond);
 }
 
 function nextQuestion(number) {

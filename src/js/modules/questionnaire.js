@@ -27,7 +27,7 @@ const questionnaire = {
   },
   3: {
     text: 'Что вы цените в сервисе нашего ресторана?',
-    type: 'select-multiple',
+    type: 'selectMultiple',
     answers: [
       'Быстрая подача блюд',
       'Вежливый персонал',
@@ -40,7 +40,7 @@ const questionnaire = {
   },
   4: {
     text: 'Что вам не нравится в нашем ресторане?',
-    type: 'select-multiple',
+    type: 'selectMultiple',
     answers: [
       'Медленная подача блюд',
       'Грубый персонал',
@@ -54,7 +54,7 @@ const questionnaire = {
   },
   5: {
     text: 'Какие блюда вы хотели бы видеть в нашем ресторане? Введите название блюда и нажмите «Добавить».',
-    type: 'input-multiple',
+    type: 'inputMultiple',
     minLength: 3,
     next: 6,
   },
