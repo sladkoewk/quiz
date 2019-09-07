@@ -61,8 +61,6 @@ const questionnaire = {
   6: {
     text: 'Дата вашего последнего визита в наш ресторан',
     type: 'date',
-    notLater: 'today',
-    minLength: 3,
     next: 7,
   },
   7: {

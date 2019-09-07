@@ -33,7 +33,7 @@ function nextQuestion(number) {
 function startQuiz(questionnaire, containerElement) {
   questions = questionnaire;
   container = containerElement;
-  nextQuestion(0);
+  nextQuestion(6);
 }
 
 export default startQuiz;
