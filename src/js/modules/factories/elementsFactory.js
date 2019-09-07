@@ -1,12 +1,12 @@
-import title from '../formElements/title';
-import start from '../formElements/start';
-import input from '../formElements/input';
-import inputMultiple from '../formElements/inputMultiple';
-import radio from '../formElements/radio';
-import selectMultiple from '../formElements/selectMultiple';
-import textarea from '../formElements/textarea';
-import date from '../formElements/date';
-import end from '../formElements/end';
+import title from '../questionType/title';
+import start from '../questionType/start';
+import input from '../questionType/input';
+import inputMultiple from '../questionType/inputMultiple';
+import radio from '../questionType/radio';
+import selectMultiple from '../questionType/selectMultiple';
+import textarea from '../questionType/textarea';
+import date from '../questionType/date';
+import end from '../questionType/end';
 
 const ELEMENTS = {
   title,
