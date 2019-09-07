@@ -10,7 +10,6 @@ function selectMultiple(question, index, container, respond) {
 
     checkboxItem.addEventListener('change', () => {
       const selected = selectedOptions(container);
-      console.log(selected);
       if (selected.length > 0) {
         enableButtonElement(button);
       } else {

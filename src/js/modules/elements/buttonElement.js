@@ -4,8 +4,7 @@ function buttonElement(text, isDisable) {
   button.appendChild(textButton);
   button.className = 'button mdl-button mdl-js-button mdl-button--raised mdl-button--colored';
   if (isDisable) {
-    button.className = 'button mdl-button mdl-js-button mdl-button--raised';
-    button.setAttribute('disabled', 'disabled');
+    disableButtonElement(button);
   }
   return button;
 }

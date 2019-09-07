@@ -1,3 +1,4 @@
+import './vendor/appendPolyfill';
 import './vendor/material.min';
 
 import questionnaire from './modules/questionnaire';

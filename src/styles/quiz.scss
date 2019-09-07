@@ -12,11 +12,6 @@
   border-radius: 5px;
   padding: 80px 56px;
   margin-bottom: 80px;
-
-  @media (min-width: $breakpoint-desktop) {
-    // max-width: 980px;
-    // margin: 0 auto;
-  }
 }
 
 .quiz__item {

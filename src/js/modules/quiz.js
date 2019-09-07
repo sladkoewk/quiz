@@ -16,7 +16,6 @@ function writeAnswer(answer, index) {
 }
 
 function respond(answerObject) {
-  console.log(answers);
   const { next, answer, index } = answerObject;
   writeAnswer(answer, index);
   nextQuestion(next);
