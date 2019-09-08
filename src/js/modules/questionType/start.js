@@ -5,9 +5,11 @@ function start(question, index, container, respond) {
 
   container.append(startButton);
 
-  startButton.addEventListener('click', () => {
+  function sendResult() {
     respond({ next: question.next, index });
-  });
+  }
+
+  startButton.addEventListener('click', sendResult);
 }
 
 export default start;

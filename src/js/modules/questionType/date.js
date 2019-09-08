@@ -27,6 +27,8 @@ function date(question, index, container, respond) {
 
   container.append(flatpickrContainer);
   container.append(buttonNext);
+
+  window.componentHandler.upgradeAllRegistered();
 }
 
 export default date;

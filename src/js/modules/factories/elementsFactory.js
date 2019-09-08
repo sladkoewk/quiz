@@ -7,6 +7,7 @@ import selectMultiple from '../questionType/selectMultiple';
 import textarea from '../questionType/textarea';
 import date from '../questionType/date';
 import end from '../questionType/end';
+import result from '../questionType/result';
 
 const ELEMENTS = {
   title,
@@ -18,11 +19,16 @@ const ELEMENTS = {
   textarea,
   date,
   end,
+  result,
 };
 
-function elementsFactory(question, index, container, respond) {
+function elementsFactory(question, index, container, respond, logAnswers) {
   title(question.text, container);
-  ELEMENTS[question.type](question, index, container, respond);
+  if (ELEMENTS[question.type] === result) {
+    ELEMENTS[question.type](question, index, container, respond, logAnswers);
+  } else {
+    ELEMENTS[question.type](question, index, container, respond);
+  }
 }
 
 export default elementsFactory;

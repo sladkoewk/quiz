@@ -9,7 +9,9 @@ function textarea(question, index, container, respond) {
   container.append(button);
 
   function sendResult() {
-    respond({ answer: textareaField.value, next: question.next, index });
+    respond({
+      answer: textareaField.value, next: question.next, index, date: new Date(),
+    });
   }
 
   button.addEventListener('click', sendResult);

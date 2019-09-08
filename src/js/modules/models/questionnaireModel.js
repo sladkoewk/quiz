@@ -1,4 +1,4 @@
-const questionnaire = {
+const questionnaireModel = {
   0: {
     text: 'Добрый день. <br>Мы рады, что вы посетили наш ресторан «У берега реки». Мы стараемся обеспечить высокое качество обслуживания, поэтому для нас важна обратная связь с гостями ресторана. Просим вас ответить на вопросы, которые помогут нам сделать сервис качественнее.<br>Спасибо.',
     type: 'start',
@@ -71,9 +71,15 @@ const questionnaire = {
   8: {
     text: 'Благодарим вас за участие в опросе',
     type: 'end',
+    button1: { text: 'Начать опрос заново', next: 0 },
+    button2: { text: 'Результаты опроса', next: 9 },
+  },
+  9: {
+    text: 'Результаты опроса',
+    type: 'result',
     textButton: 'Начать опрос заново',
     next: 0,
   },
 };
 
-export default questionnaire;
+export default questionnaireModel;

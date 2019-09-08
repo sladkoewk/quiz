@@ -20,7 +20,7 @@ function checkboxElement(text, index) {
 }
 
 export function selectedOptions(container) {
-  const selectedElements = container.querySelectorAll('input[type="checkbox"]:checked');
+  const selectedElements = Array.prototype.slice.call(container.querySelectorAll('input[type="checkbox"]:checked'));
   const answers = [];
   for (const element of selectedElements) {
     answers.push(element.value);
