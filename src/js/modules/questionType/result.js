@@ -5,13 +5,11 @@ import tbody from '../elements/tbody';
 
 function result(question, index, container, respond, logAnswers) {
   const startButton = buttonElement(question.textButton, false);
-  container.append(startButton);
-
   const tableResult = table();
   tableResult.className = 'mdl-data-table mdl-js-data-table mdl-shadow--2dp';
   const theadResult = thead(['Поле', 'Значение']);
   tableResult.append(theadResult);
-  container.append(tableResult);
+  container.append(startButton, tableResult);
 
   for (const quiz of logAnswers) {
     const tbodyResult = tbody(quiz);

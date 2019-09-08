@@ -11,8 +11,7 @@ function inputElement() {
   label.className = 'mdl-textfield__label';
   inputField.setAttribute('for', 'input');
 
-  wrapperInput.appendChild(inputField);
-  wrapperInput.appendChild(label);
+  wrapperInput.append(inputField, label);
 
   return { wrapperInput, inputField };
 }

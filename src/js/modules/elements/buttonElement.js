@@ -1,7 +1,7 @@
 function buttonElement(text, isDisable) {
   const button = document.createElement('button');
-  const textButton = document.createTextNode(text);
-  button.appendChild(textButton);
+  button.textContent = text;
+
   button.className = 'button mdl-button mdl-js-button mdl-button--raised mdl-button--colored';
   if (isDisable) {
     disableButtonElement(button);

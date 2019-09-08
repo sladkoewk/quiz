@@ -4,8 +4,7 @@ function listItemElement(text, cb) {
 
   const title = document.createElement('span');
   title.className = 'mdl-list__item-primary-content';
-  const textTitle = document.createTextNode(text);
-  title.appendChild(textTitle);
+  title.textContent = text;
 
   const action = document.createElement('a');
   action.className = 'mdl-list__item-secondary-action';
@@ -13,13 +12,10 @@ function listItemElement(text, cb) {
 
   const icon = document.createElement('i');
   icon.className = 'material-icons';
-  const iconType = document.createTextNode('delete');
-  icon.appendChild(iconType);
+  icon.textContent = 'delete';
 
-  action.appendChild(icon);
-
-  item.appendChild(title);
-  item.appendChild(action);
+  action.append(icon);
+  item.append(title, action);
 
   action.addEventListener('click', (e) => {
     e.preventDefault();

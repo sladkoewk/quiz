@@ -1,11 +1,11 @@
-import elementsFactory from '../factories/elementsFactory';
+import questionTypeFactory from '../factories/questionTypeFactory';
 
 const logAnswers = [];
 let resultQuiz = {};
 let container;
 let questions;
 
-function writeAnswer(answerObject) {
+function saveAnswer(answerObject) {
   const { answer, index, date } = answerObject;
   if (index === 0) {
     resultQuiz = {};
@@ -27,13 +27,13 @@ function writeAnswer(answerObject) {
 
 function respond(answerObject) {
   const { next } = answerObject;
-  writeAnswer(answerObject);
+  saveAnswer(answerObject);
   nextQuestion(next);
 }
 
 function renderQuestion(question, index) {
   container.innerHTML = '';
-  elementsFactory(question, index, container, respond, logAnswers);
+  questionTypeFactory(question, index, container, respond, logAnswers);
 }
 
 function nextQuestion(number) {

@@ -3,10 +3,9 @@ import buttonElement, { disableButtonElement, enableButtonElement } from '../ele
 
 function input(question, index, container, respond) {
   const { wrapperInput, inputField } = inputElement();
-  const button = buttonElement('Далее', true);
 
-  container.append(wrapperInput);
-  container.append(button);
+  const button = buttonElement('Далее', true);
+  container.append(wrapperInput, button);
 
   function sendResult() {
     respond({ answer: inputField.value, next: question.next, index });

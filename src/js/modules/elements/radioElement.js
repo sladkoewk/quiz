@@ -12,10 +12,9 @@ function radioElement(text, index) {
 
   const span = document.createElement('span');
   span.className = 'mdl-radio__label';
-  span.innerHTML = text;
+  span.textContent = text;
 
-  label.appendChild(input);
-  label.appendChild(span);
+  label.append(input, span);
 
   return { radioWrapper: label, radioItem: input };
 }

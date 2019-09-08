@@ -8,11 +8,9 @@ function radio(question, index, container, respond) {
 
   for (let i = 0; i < radiosLength; i++) {
     const { radioWrapper, radioItem } = radioElement(question.answers[i].text, i);
-
     radioItem.addEventListener('change', () => {
       enableButtonElement(button);
     });
-
     container.append(radioWrapper);
   }
 

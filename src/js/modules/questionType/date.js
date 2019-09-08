@@ -25,8 +25,7 @@ function date(question, index, container, respond) {
     respond({ answer: selectDate, next: question.next, index });
   });
 
-  container.append(flatpickrContainer);
-  container.append(buttonNext);
+  container.append(flatpickrContainer, buttonNext);
 
   window.componentHandler.upgradeAllRegistered();
 }

@@ -14,28 +14,27 @@ function inputMultiple(question, index, container, respond) {
   const buttonNext = buttonElement('Далее', true);
   const list = listElement();
 
-  creatorItem.append(wrapperInput);
-  creatorItem.append(buttonAdd);
-  container.append(creatorItem);
-  container.append(list);
-  container.append(buttonNext);
+  creatorItem.append(wrapperInput, buttonAdd);
+  container.append(creatorItem, list, buttonNext);
 
-  inputField.addEventListener('input', () => {
+  function setDisableAddbutton() {
     if (inputField.value.length >= question.minLength) {
       enableButtonFabElement(buttonAdd);
     } else {
       disableButtonFabElement(buttonAdd);
     }
-  });
+  }
 
-  function action(text) {
+  inputField.addEventListener('input', () => setDisableAddbutton());
+
+  function actionDelete(text) {
     const removeIndex = answers.indexOf(text);
     answers.splice(removeIndex, 1);
     renderListItem();
   }
 
   function checkMinCountItem() {
-    if (answers.length >= question.minLength) {
+    if (answers.length >= question.minCount) {
       enableButtonElement(buttonNext);
     } else {
       disableButtonElement(buttonNext);
@@ -46,7 +45,7 @@ function inputMultiple(question, index, container, respond) {
     checkMinCountItem();
     list.innerHTML = '';
     for (const item of answers) {
-      list.appendChild(listItemElement(item, action));
+      list.append(listItemElement(item, actionDelete));
     }
   }
 
@@ -57,6 +56,7 @@ function inputMultiple(question, index, container, respond) {
   function pushItem() {
     answers.push(inputField.value);
     clearInput();
+    setDisableAddbutton();
     renderListItem();
   }
 

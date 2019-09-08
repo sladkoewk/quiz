@@ -11,8 +11,7 @@ function textareaElement() {
   label.className = 'mdl-textfield__label';
   textareaField.setAttribute('for', 'input');
 
-  wrapperInput.appendChild(textareaField);
-  wrapperInput.appendChild(label);
+  wrapperInput.append(textareaField, label);
 
   return { wrapperInput, textareaField };
 }

@@ -5,8 +5,7 @@ function textarea(question, index, container, respond) {
   const { wrapperInput, textareaField } = textareaElement();
   const button = buttonElement('Далее', false);
 
-  container.append(wrapperInput);
-  container.append(button);
+  container.append(wrapperInput, button);
 
   function sendResult() {
     respond({

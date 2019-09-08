@@ -56,6 +56,7 @@ const questionnaireModel = {
     text: 'Какие блюда вы хотели бы видеть в нашем ресторане? Введите название блюда и нажмите «Добавить».',
     type: 'inputMultiple',
     minLength: 3,
+    minCount: 3,
     next: 6,
   },
   6: {

@@ -22,7 +22,7 @@ const ELEMENTS = {
   result,
 };
 
-function elementsFactory(question, index, container, respond, logAnswers) {
+function questionTypeFactory(question, index, container, respond, logAnswers) {
   title(question.text, container);
   if (ELEMENTS[question.type] === result) {
     ELEMENTS[question.type](question, index, container, respond, logAnswers);
@@ -31,4 +31,4 @@ function elementsFactory(question, index, container, respond, logAnswers) {
   }
 }
 
-export default elementsFactory;
+export default questionTypeFactory;

@@ -1,12 +1,10 @@
 function buttonFabElement(typeIcon, isDisable) {
   const buttonFab = document.createElement('button');
   buttonFab.className = 'mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored';
-
   const icon = document.createElement('i');
   icon.className = 'material-icons';
-  const textAddButton = document.createTextNode(typeIcon);
-  icon.appendChild(textAddButton);
-  buttonFab.appendChild(icon);
+  icon.textContent = typeIcon;
+  buttonFab.append(icon);
 
   if (isDisable) {
     disableButtonFabElement(buttonFab);

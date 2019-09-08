@@ -13,8 +13,7 @@ function checkboxElement(text, index) {
   span.className = 'mdl-checkbox__label';
   span.innerHTML = text;
 
-  label.appendChild(input);
-  label.appendChild(span);
+  label.append(input, span);
 
   return { checkboxWrapper: label, checkboxItem: input };
 }
