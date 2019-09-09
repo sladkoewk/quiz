@@ -1,6 +1,6 @@
 # Quiz
 
-Генератор опросников на основе передаваемой модели (questionnaireModel.js).
+Генератор опросников на основе передаваемой модели [questionnaireModel.js](https://github.com/sladkoewk/quiz/blob/master/src/js/modules/models/questionnaireModel.js).
 
 [Quiz deploy](https://sladkoewk.github.io/quiz/)
 
